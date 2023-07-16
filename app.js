@@ -23,7 +23,7 @@ app.get("/",function(req, res){
 
 })
 app.post("/",function(req, res){
-    newlist = body.
+    newlist = body.Todolist
 })
 
 
