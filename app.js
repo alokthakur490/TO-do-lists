@@ -4,6 +4,7 @@ var newlists = ["buy food","watch movie"];
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
 
@@ -15,7 +16,7 @@ app.get("/",function(req, res){
     const options = { weekday: 'long',year: 'numeric', month: 'long', day: '2-digit' };
     const date = new Date();
     var todayday = date.toLocaleDateString('en-IN', options);
-    res.render("lis",{day:todayday,})
+    res.render("lis",{day:todayday,newlists : newlists})
     
 
    
