@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-var todos = ["buy food","cook food"];
+var newlists = ["buy food","watch movie"];
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
@@ -15,20 +15,17 @@ app.get("/",function(req, res){
     const options = { weekday: 'long',year: 'numeric', month: 'long', day: '2-digit' };
     const date = new Date();
     var todayday = date.toLocaleDateString('en-IN', options);
-    res.render("lis",{day : todayday,newlist :todos});
+    res.render("lis",{day:todayday,})
+    
 
    
-   
 
-  
 
 })
 app.post("/",function(req, res){
-    todo = req.body.Todolist;
-    todos.push(todo);
-    res.redirect("/");
-   
+    newlist = body.
 })
+
 
 
 app.listen(3000,function(){
