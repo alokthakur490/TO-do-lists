@@ -23,7 +23,9 @@ app.get("/",function(req, res){
 
 })
 app.post("/",function(req, res){
-    newlist = body.Todolist
+    newlist = req.body.Todolist;
+    newlists.push(newlist);
+    res.redirect("/");
 })
 
 
